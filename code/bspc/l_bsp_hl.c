@@ -247,7 +247,7 @@ int FastChecksum(void *buffer, int bytes)
 	int	checksum = 0;
 
 	while( bytes-- )  
-		checksum = (checksum << 4) ^ *((char *)buffer)++;
+		checksum = (checksum << 4) ^ *(((char *)buffer)+1);
 
 	return checksum;
 }
